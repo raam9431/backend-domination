@@ -1,0 +1,6 @@
+form jab bhi submit karoge pahli cheej ye dekhiye ki saari field ke paas name property h ya nhi
+form ke paaas action hai y nhi
+backend k paas route hai ya nhi
+route k andar aapko data unke type ke hisaab se milega 
+    GET - req.query
+    POST - req.body
