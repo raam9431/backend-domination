@@ -1,0 +1,12 @@
+{
+  "name": "24-lesson(getting-started-with-routes-in-postman)",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
