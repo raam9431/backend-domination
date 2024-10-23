@@ -12,8 +12,8 @@ app.get('/data', function (req, res) {
 });
 
 app.post('/data/:number', function (req, res) {
+  data.push(parseInt(req.params.number));
   res.send(data);
-  parseInt(req.params.number);
 });
 
 app.listen(3000);
