@@ -6,7 +6,7 @@ app.get('/api/testing/devlopment', function (req, res) {
 });
 
 app.get('/api/testing/devlopment/user', function (req, res) {
-  res.send('Hello World');
+  res.send('Hey');
 });
 
 app.listen(3000);
