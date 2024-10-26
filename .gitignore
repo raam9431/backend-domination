@@ -1,1 +1,66 @@
 .history
+# ---- Node Modules ----
+node_modules/
+
+# ---- Logs ----
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Dependency directories ----
+jspm_packages/
+.eslintcache
+
+# ---- Environment Variables ----
+.env
+.env.test
+.env.production
+.env.*.local
+
+# ---- OS Files ----
+.DS_Store
+Thumbs.db
+
+# ---- Testing ----
+coverage/
+.nyc_output/
+.vscode/test-output/
+
+# ---- Build Files ----
+dist/
+build/
+
+# ---- IDE and Editor Files ----
+# VSCode
+.vscode/
+.history/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ---- Temporary Files ----
+*.tmp
+*.swp
+*.bak
+*.seed
+*.pid
+*.pid.lock
+
+# ---- npm / yarn / pnpm ----
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Optional lockfiles ----
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
