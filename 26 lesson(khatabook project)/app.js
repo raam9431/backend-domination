@@ -19,12 +19,12 @@ app.get('/create', function (req, res) {
   const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are 0-based
   const year = currentDate.getFullYear();
 
-  const formattedDate = `${day}-${month}-${year}.txt`;
+  const formattedDate = ```${day}-${month}-${year}.txt`;
   console.log(formattedDate);
 
   fs.writeFile(`./files/${formattedDate}`, "daal cheeni", function (err) {
     if (err) return res.send("something went wrong")
-    else res.send("done");
+    else res.send('done ');
   });
 
 });
