@@ -10,9 +10,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
-    fs.readdir(`./files`, function (err, files) {
-        res.render("index", { files });
-        console.log(files);
+    fs.readdir(`./files`, function (err, file) {
+        res.render("index", { file });
+        console.log(file);
     });
 });
 
@@ -25,6 +25,13 @@ app.get('/edit/:filename', function (req, res) {
 
 app.post('/update/:filename', function (req, res) {
     fs.writeFile(`./files/${req.params.filename}`, req.body.filedata, function (err) {
+        if (err) return res.send(err);
+        res.redirect("/");
+    });
+});
+
+app.get('/delete/:filename', function (req, res) {
+    fs.unlink(`./files/${req.params.filename}`, function (err) {
         if (err) return res.send(err);
         res.redirect("/");
     });

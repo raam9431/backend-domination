@@ -8,10 +8,12 @@
 </head>
 
 <body>
-    <% files.forEach(function(file) { %>
+    <% file.forEach(function(file) { %>
         <h3><%= file %></h3>
         <a href="/edit/<%= file %>">edit</a>
+        <a href="/delete/<%= file %>">delete</a>
     <% }); %>
+
 </body>
 
 </html>
