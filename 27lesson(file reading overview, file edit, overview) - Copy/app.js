@@ -17,6 +17,27 @@ app.get('/', function (req, res) {
     });
 });
 
+app.get('/edit/:filename', function (req, res) {
+    fs.readFile(`./files/${req.params.filename}`, "utf-8", function (err, data) {
+        if (err) return res.send(err);
+        res.render("edit", { data, filename: req.params.filename });
+    })
+});
+
+app.post('/update/:filename', function (req, res) {
+    fs.writeFile(`./files/${req.params.filename}`, req.body.filedata, function (err) {
+        if (err) return res.send(err);
+        res.redirect("/");
+    })
+});
+
+app.get('/delete/:filename', function (req, res) {
+    fs.unlink(`./files/${req.params.filename}`, function (err) {
+        if (err) return res.send(err);
+        res.redirect("/");
+    })
+});
+
 
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
