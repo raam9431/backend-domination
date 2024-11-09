@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
     fs.readdir(`./files`, function (err, files) {
+        if (err) res.send(err)
         res.render("index", { files });
         console.log(files);
     });
@@ -31,6 +32,7 @@ app.post('/update/:filename', function (req, res) {
     })
 });
 
+
 app.get('/delete/:filename', function (req, res) {
     fs.unlink(`./files/${req.params.filename}`, function (err) {
         if (err) return res.send(err);
@@ -39,7 +41,7 @@ app.get('/delete/:filename', function (req, res) {
 });
 
 
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(3001, () => {
+    console.log('Server is running on http://localhost:3001');
 });
 
